@@ -11,22 +11,18 @@ import Saved from "./pages/Saved";
 function App() {
   return (
     <Router>
-      <NavBar>
-        <Container fluid>
-          <Row>
-            <Title>
-              <Switch>
-                <Route exact path= "/" component={Search}/>    
-                <Route exact path= "/saved" component={Saved}/>
-              </Switch>
-
-            </Title>
-          </Row>
-        </Container>
-      </NavBar>
-
+      <NavBar />
+      <Container fluid>
+        <Row>
+          <Title />
+          <Switch>
+            <Route exact path="/" component={Search} />
+            <Route exact path="/saved" component={Saved} />
+          </Switch>
+        </Row>
+      </Container>
     </Router>
-    
+
   );
 }
 

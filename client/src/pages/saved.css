@@ -1,0 +1,11 @@
+
+.container {
+    border: 2px solid;
+    border-style: solid;
+    margin-top: 2em;
+}
+
+.row {
+    justify-content: center;
+    margin-top: 2em;
+}
