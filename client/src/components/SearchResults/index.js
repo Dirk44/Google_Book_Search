@@ -1,18 +1,27 @@
 import React from 'react'
-import { Container, Card, Row, Col } from 'react-bootstrap'
+import { Container, Card, Row, Col, Button } from 'react-bootstrap'
 
 
-export default function SearchResults() {
+export default function SearchResults(props) {
     return (
         <Container>
             <Card>
                 <Row>
-                    <Col>
-                    <img src={""} className="card-img" alt="..."/>
+                    <Col className="md-3">
+                        <img src={props.image} className="card-img" alt={props.title} />
                     </Col>
+                    <Col className="md-9">
+                        <h2>{props.title}</h2>
+                        <h4>{props.authors}</h4>
+                        <p>{props.description}</p>
+                        <Button className="mr-2" variant="primary" target="blank" href={props.link}>View</Button>
+                        <Button variant="success" onClick={() => props.buttonClick(props)}>{props.buttonText}</Button>
+                    </Col>
+
                 </Row>
+
             </Card>
-            
+
         </Container>
     )
 }
