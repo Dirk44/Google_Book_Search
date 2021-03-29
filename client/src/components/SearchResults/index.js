@@ -1,6 +1,6 @@
-import React from 'react'
-import { Container, Card, Row, Col, Button } from 'react-bootstrap'
-
+import React from 'react';
+import { Container, Card, Row, Col, Button } from 'react-bootstrap';
+import "./style.css";
 
 export default function SearchResults(props) {
     return (
@@ -12,7 +12,7 @@ export default function SearchResults(props) {
                     </Col>
                     <Col className="md-9">
                         <h2>{props.title}</h2>
-                        <h4>{props.authors}</h4>
+                        <h4>{props.authors.join(", ")}</h4>
                         <p>{props.description}</p>
                         <Button className="mr-2" variant="primary" target="blank" href={props.link}>View</Button>
                         <Button variant="success" onClick={() => props.buttonClick(props)}>{props.buttonText}</Button>

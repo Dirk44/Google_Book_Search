@@ -34,11 +34,19 @@ export default {
             array.push({
                 id: element.id, 
                 title: element.volumeInfo.title,
-                authors: element.volumeInfo.authors,
-                desription: element.volumeInfo.desription,
-                image: element.volumeInfo.imageLinks.smallThumbnail,
+                authors: element.volumeInfo.authors ?? ["No authors on file"],
+                description: element.volumeInfo.description,
+                image: element.volumeInfo.imageLinks?.smallThumbnail ?? "https://via.placeholder.com/150",
                 link: element.volumeInfo.infoLink
             });
+            // array.push({
+            //     id: element.id, 
+            //     title: element.volumeInfo.title,
+            //     authors: element.volumeInfo.authors,
+            //     desription: element.volumeInfo.desription,
+            //     image: element.volumeInfo.imageLinks.smallThumbnail,
+            //     link: element.volumeInfo.infoLink
+            // });
         });
         return(array);
     }
