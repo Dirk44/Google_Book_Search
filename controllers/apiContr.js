@@ -1,6 +1,6 @@
 const axios = require("axios").default;
 const mongoose = require("mongoose");
-const { Books } = require("../models/Books");
+const Books = require("../models/Books");
 
 module.exports = {
     apiGet: async function(req, res) {
