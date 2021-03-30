@@ -12,7 +12,7 @@ export default function Saved() {
     
 
     const handleDelete = async (title) => {
-
+console.log(title);
         await API.delete(title.id);
 
         async function fetchData() {
@@ -41,7 +41,8 @@ export default function Saved() {
                             {savedResults.map((data) => {
                                 return (
                                     <SearchResults
-                                        key={data.id}
+                                        key={data._id}
+                                        id={data._id}
                                         title={data.title}
                                         authors={data.authors}
                                         description={data.description}

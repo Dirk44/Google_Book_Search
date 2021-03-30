@@ -8,7 +8,7 @@ export default function NavBar() {
                 <Navbar.Brand href="/">Google Books Search</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="/">Search</Nav.Link>
-                    <Nav.Link href="/">Saved Books</Nav.Link>
+                    <Nav.Link href="/saved">Saved Books</Nav.Link>
                 </Nav>
             </Navbar>
             <br />

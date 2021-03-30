@@ -15,6 +15,7 @@ export default function Search() {
     };
 
     const handleSave = async (data) => {
+        console.log(data);
         await API.post(data);
     }
     return (

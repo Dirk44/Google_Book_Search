@@ -20,7 +20,7 @@ export default {
     delete: async function(data) {
         const res = await axios({
             method: "delete",
-            url: "/api/books" + data,
+            url: "/api/books/" + data,
         });
         return(res);
     },

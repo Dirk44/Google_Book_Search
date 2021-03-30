@@ -12,6 +12,7 @@ module.exports = {
                 res.status(404).json({ message: "Did not find any books." });
             }
         } catch (err) {
+            console.log(err);
             res.status(500).json(err);
         }
     },
@@ -25,6 +26,8 @@ module.exports = {
                 res.status(404).json({ message: "Did not save book." });
             }
         } catch (err) {
+            console.log(err);
+
             res.status(500).json(err);
         }
     },
@@ -38,6 +41,8 @@ module.exports = {
                 res.status(404).json({ message: "Did not delete book." });
             }
         } catch (err) {
+            console.log(err);
+
             res.status(500).json(err);
         }
     },
